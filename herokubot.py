@@ -34,16 +34,18 @@ class TelegramBot:
   def criar_resposta(self, mensagem, primeira_mensagem):
     mensagem = mensagem['message']['text']
     if primeira_mensagem == True or mensagem.lower() == "menu":
-      return f'''Olá bem vindo a Va - Cursos{os.linesep}1 - Ajuda{os.linesep}2 - Cursos{os.linesep}3 - App'''
+      return f'''Olá bem vindo a Va - Cursos{os.linesep}1 - Como adquirir um curso{os.linesep}2 - Como ativar meu curso{os.linesep}3 - Aplicativo para o celular{os.linesep}4 - Preciso de ajuda'''
     if mensagem == "1":
-      return "Como podemos te ajudar?"
+      return "Para adquirir um cursos acesse: https://www.va-cursos.com/shop"
     if mensagem == "2":
-      return "Temos SQL"
+      return "Para ativar seu cursa siga os passos nesse vídeo:{os.linesep}link"
     if mensagem == "3":
-      return "Temos app para android"
+      return "No momento possuímos aplicativo apenas para android e pode ser baixado aqui:{os.linesep}"
+    if mensagem == "4":
+        return "Para ter acesso a ajuda por favor encaminhe um e-mail para: va-cursos@hotmail.com"
 
     else:
-      return "Digite menu para ver o menu"
+      return "Digite menu para ver as opções disponíveis"
 
   def responder(self, resposta, chat_id):
     link_envio = f"{self.url_base}sendMessage?chat_id={chat_id}&text={resposta}"
