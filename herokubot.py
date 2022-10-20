@@ -36,13 +36,13 @@ class TelegramBot:
     if primeira_mensagem == True or mensagem.lower() == "menu":
       return f'''Olá bem vindo a Va - Cursos{os.linesep}1 - Como adquirir um curso{os.linesep}2 - Como ativar meu curso{os.linesep}3 - Aplicativo para o celular{os.linesep}4 - Preciso de ajuda'''
     if mensagem == "1":
-      return "Para adquirir um cursos acesse: https://www.va-cursos.com/shop"
+      return f"Para adquirir um cursos acesse:{os.linesep}https://www.va-cursos.com/shop"
     if mensagem == "2":
-      return "Para ativar seu cursa siga os passos nesse vídeo:{os.linesep}link"
+      return f"Para ativar seu cursa siga os passos nesse vídeo:{os.linesep}link"
     if mensagem == "3":
-      return "No momento possuímos aplicativo apenas para android e pode ser baixado aqui:{os.linesep}"
+      return f"No momento possuímos aplicativo apenas para android e pode ser baixado aqui:{os.linesep}https://play.google.com/store/apps/details?id=com.va_cursos.va_cursos_app&hl=pt-BR"
     if mensagem == "4":
-        return "Para ter acesso a ajuda por favor encaminhe um e-mail para: va-cursos@hotmail.com"
+        return f"Para ter acesso a ajuda por favor encaminhe um e-mail para: {os.linesep}va-cursos@hotmail.com"
 
     else:
       return "Digite menu para ver as opções disponíveis"
